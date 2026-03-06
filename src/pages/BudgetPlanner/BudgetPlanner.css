@@ -1,0 +1,154 @@
+/* PAGE */
+
+.budget-page {
+  padding: 100px 10%;
+  background: #e2dddd;
+  min-height: 100vh;
+}
+
+.budget-page h1 {
+  font-size: 48px;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.budget-desc {
+  text-align: center;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+/* TOTAL HEADER */
+
+.budget-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.budget-header h2 {
+  font-size: 32px;
+  font-family: "Playfair Display", serif;
+}
+
+.budget-header span {
+  color: #b48a2c;
+}
+
+/* MAIN BOX */
+
+.budget-box {
+  background: white;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.05);
+}
+
+/* CATEGORY */
+
+.budget-category {
+  margin-bottom: 50px;
+}
+
+.budget-category h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-left: 4px solid #b48a2c;
+  padding-left: 10px;
+}
+
+/* ITEM ROW */
+
+.budget-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+/* INPUTS */
+
+.budget-item input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.budget-item input:focus {
+  border-color: #b48a2c;
+  outline: none;
+}
+
+/* ADD BUTTON */
+
+.add-item-btn {
+  margin-top: 10px;
+  background: transparent;
+  border: none;
+  color: #b48a2c;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.add-item-btn:hover {
+  color: black;
+}
+
+/* SAVE BUTTON */
+
+.save-budget-btn {
+  padding: 14px 40px;
+  background: linear-gradient(to right, #b48a2c, #e6c866);
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-budget-btn:hover {
+  opacity: 0.9;
+}
+/* HERO SECTION */
+/* PARALLAX HERO */
+
+.budget-hero {
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;   /* 🔥 THIS creates parallax */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.budget-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.budget-hero-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.budget-hero-overlay h1 {
+  font-size: 55px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.budget-hero-overlay p {
+  font-size: 18px;
+  opacity: 0.9;
+}

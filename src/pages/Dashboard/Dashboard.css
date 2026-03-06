@@ -1,0 +1,26 @@
+.dashboard {
+  padding: 50px;
+  text-align: center;
+}
+
+.dashboard h2 {
+  color: #b03060;
+  margin-bottom: 30px;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.dash-card {
+  padding: 25px;
+  background: #fff7f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.dash-card h3 {
+  color: #b03060;
+}

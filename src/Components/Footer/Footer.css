@@ -1,0 +1,125 @@
+/* ===== FOOTER ===== */
+
+.footer {
+  background: linear-gradient(180deg, #413636, #3a3030);
+  color: #dddddd;
+  padding: 90px 10% 25px;
+  position: relative;
+}
+
+/* Container Layout */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===== BRAND ===== */
+
+.footer-brand h2 {
+  font-size: 28px;
+  color: #d4af37;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* Gold Divider */
+.footer-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #d4af37, #f6e27a);
+  margin-bottom: 18px;
+  border-radius: 5px;
+}
+
+.footer-brand p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #bbbbbb;
+}
+
+/* ===== LINKS ===== */
+
+.footer-links h4,
+.footer-contact h4 {
+  margin-bottom: 18px;
+  color: #ffffff;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+/* Underline Accent */
+.footer-links h4::after,
+.footer-contact h4::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #d4af37;
+  margin-top: 6px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+  font-size: 14.5px;
+  cursor: pointer;
+  color: #bbbbbb;
+  transition: 0.3s ease;
+}
+
+.footer-links li:hover {
+  color: #d4af37;
+  transform: translateX(5px);
+}
+
+/* ===== CONTACT ===== */
+
+.footer-contact p {
+  font-size: 14.5px;
+  margin-bottom: 10px;
+  color: #bbbbbb;
+  transition: 0.3s;
+}
+
+.footer-contact p:hover {
+  color: #d4af37;
+}
+
+/* ===== BOTTOM ===== */
+
+.footer-bottom {
+  margin-top: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  letter-spacing: 0.5px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer-links h4::after,
+  .footer-contact h4::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-divider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,117 @@
+/* Page Container */
+.service-page {
+  padding: 60px 80px;
+  background: linear-gradient(
+    to right,
+    #fff9f5,
+    #ffffff
+  );
+  min-height: 100vh;
+}
+
+/* Title */
+.service-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #2c2c2c;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.service-title::after {
+  content: "";
+  width: 90px;
+  height: 4px;
+  background: #ff4d6d;
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  border-radius: 5px;
+}
+
+/* Grid Layout */
+.vendors-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(320px, 1fr)
+  );
+  gap: 30px;
+}
+
+/* Vendor Card */
+.vendor-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 8px 20px
+    rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.vendor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px
+    rgba(0, 0, 0, 0.12);
+}
+
+/* Vendor Title */
+.vendor-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Price */
+.vendor-price {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ff4d6d;
+  margin-bottom: 18px;
+}
+
+/* Images */
+.vendor-images {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.vendor-images img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.vendor-images img:hover {
+  transform: scale(1.07);
+}
+
+/* Button */
+.book-btn {
+  padding: 10px 24px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.book-btn:hover {
+  background: #e63e5c;
+  transform: scale(1.05);
+}
+
+/* Status text */
+.status-text {
+  font-size: 18px;
+  color: #777;
+  margin-top: 20px;
+}
