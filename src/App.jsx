@@ -7,7 +7,7 @@ import BudgetPlanner from "./pages/BudgetPlanner/BudgetPlanner";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Aboutus from "./pages/Aboutus/Aboutus"
+import Aboutus from "./pages/Aboutus/AboutUs"
 import ServiceVendors from "./pages/ServiceVentors/ServiceVentors";
 import GuestManagement from "./pages/GuestManagement/GuestManagement";
 import Contact from "./pages/Contact/Contact";
