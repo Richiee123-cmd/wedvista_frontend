@@ -7,7 +7,7 @@ import BudgetPlanner from "./pages/BudgetPlanner/BudgetPlanner";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Login from "../src/pages/Login";
 import Register from "../src/pages/Register";
-import About from "./pages/Aboutus/Aboutus";
+import Aboutus from "../src/pages/Aboutus/Aboutus"
 import ServiceVendors from "./pages/ServiceVentors/ServiceVentors";
 import GuestManagement from "./pages/GuestManagement/GuestManagement";
 import Contact from "./pages/Contact/Contact";
@@ -20,7 +20,7 @@ import AdminLogin from "./Admin/Pages/AdminLogin";
 import AdminDashboard from "./Admin/Pages/Dashboard";
 import Users from "./Admin/Pages/User";
 import Vendors from "./Admin/Pages/Vendors";
-import ProtectedAdminRoute from "./Admin/Components/ProtectedAdminRoute";
+
 
 // VENDOR
 import VendorLogin from "./Vendors/Pages/VendorLogin";
@@ -30,7 +30,7 @@ import VendorDashboard from "./Vendors/Pages/VendorDashboard";
 import VendorServices from "./Vendors/Pages/VendorServices";
 import VendorBookings from "./Vendors/Pages/VendorBookings";
 import VendorProfile from "./Vendors/Pages/VendorProfile";
-import ProtectedVendorRoute from "./Vendors/Components/ProtectedVendorRoute";
+
 
 function App() {
   return (
@@ -39,7 +39,7 @@ function App() {
 
         {/* USER ROUTES */}
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<Aboutus/>} />
         <Route path="/services" element={<Services />} />
        
         <Route path="/budget" element={<BudgetPlanner />} />
