@@ -5,16 +5,24 @@ import {
   Button,
   Box,
   Avatar,
+  IconButton,
+  Menu,
+  MenuItem,
 } from "@mui/material";
+
+import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function Navbar() {
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
 
   const token = localStorage.getItem("token");
   const user = JSON.parse(localStorage.getItem("user"));
+
+  const pages = ["Home", "Services", "Budget", "Guests", "Contact"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +39,14 @@ function Navbar() {
     navigate("/login");
   };
 
+  const handleOpenMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleCloseMenu = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <AppBar
       position="fixed"
@@ -41,12 +57,12 @@ function Navbar() {
           : "transparent",
         backdropFilter: scrolled ? "blur(10px)" : "none",
         transition: "all 0.4s ease",
-        paddingX: 8,
-        paddingY: 1.5,
+        px: { xs: 2, md: 8 },
+        py: 1.5,
       }}
     >
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-
+        
         {/* LOGO */}
         <Typography
           variant="h5"
@@ -63,98 +79,119 @@ function Navbar() {
           WedVista
         </Typography>
 
-        {/* MENU */}
-        <Box sx={{ display: "flex", gap: 4, alignItems: "center" }}>
-          {["Home", "Services", "Budget", "Guests", "Contact"].map(
-            (item) => (
-              <Button
-                key={item}
-                component={Link}
-                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                sx={{
-                  color: scrolled ? "#333" : "#ffffff",
-                  fontWeight: 400,
-                  textTransform: "none",
-                  letterSpacing: "1px",
-                  position: "relative",
-                  "&::after": {
-                    content: '""',
-                    position: "absolute",
-                    width: "0%",
-                    height: "1px",
-                    bottom: 0,
-                    left: 0,
-                    backgroundColor: "#b48a2c",
-                    transition: "0.3s",
-                  },
-                  "&:hover::after": {
-                    width: "100%",
-                  },
-                }}
-              >
-                {item}
-              </Button>
-            )
-          )}
+        {/* DESKTOP MENU */}
+        <Box
+          sx={{
+            display: { xs: "none", md: "flex" },
+            gap: 4,
+            alignItems: "center",
+          }}
+        >
+          {pages.map((item) => (
+            <Button
+              key={item}
+              component={Link}
+              to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+              sx={{
+                color: scrolled ? "#333" : "#ffffff",
+                textTransform: "none",
+              }}
+            >
+              {item}
+            </Button>
+          ))}
 
-          {/* AUTH SECTION */}
           {token ? (
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-              <Avatar
-                sx={{
-                  width: 35,
-                  height: 35,
-                  background: "#1a1a1a",
-                  fontSize: "0.9rem",
-                }}
-              >
+              <Avatar sx={{ width: 35, height: 35 }}>
                 {user?.name?.charAt(0).toUpperCase()}
               </Avatar>
 
               <Button
-                onClick={logout}
-                sx={{
-                  border: "1px solid #1a1a1a",
-                  color: "#1a1a1a",
-                  borderRadius: "30px",
-                  textTransform: "none",
-                  paddingX: 3,
-                  fontWeight: 400,
-                  background: "transparent",
-                  transition: "0.3s",
-                  "&:hover": {
-                    background: "#1a1a1a",
-                    color: "#ffffff",
-                  },
-                }}
-              >
-                Logout
-              </Button>
+  component={Link}
+  to="/login"
+  sx={{
+    border: scrolled ? "2px solid #b48a2c" : "2px solid #ffffff",
+    color: scrolled ? "#b48a2c" : "#ffffff",
+    borderRadius: "30px",
+    textTransform: "none",
+    paddingX: 3,
+    fontWeight: 500,
+    letterSpacing: "1px",
+    transition: "all 0.35s ease",
+    background: "transparent",
+
+    "&:hover": {
+      background: "#b48a2c",
+      color: "#ffffff",
+      borderColor: "#b48a2c",
+      transform: "translateY(-2px)",
+      boxShadow: "0 6px 18px rgba(180,138,44,0.35)",
+    },
+  }}
+>
+  Logout
+</Button>
             </Box>
           ) : (
             <Button
-              component={Link}
-              to="/login"
-              sx={{
-                border: scrolled
-                  ? "1px solid #1a1a1a"
-                  : "1px solid #ffffff",
-                color: scrolled ? "#1a1a1a" : "#ffffff",
-                borderRadius: "30px",
-                textTransform: "none",
-                paddingX: 3,
-                fontWeight: 400,
-                background: "transparent",
-                transition: "0.3s",
-                "&:hover": {
-                  background: scrolled ? "#1a1a1a" : "#ffffff",
-                  color: scrolled ? "#ffffff" : "#1a1a1a",
-                },
-              }}
-            >
-              Login
-            </Button>
+  component={Link}
+  to="/login"
+  sx={{
+    border: scrolled ? "2px solid #b48a2c" : "2px solid #ffffff",
+    color: scrolled ? "#b48a2c" : "#ffffff",
+    borderRadius: "30px",
+    textTransform: "none",
+    paddingX: 3,
+    fontWeight: 500,
+    letterSpacing: "1px",
+    transition: "all 0.35s ease",
+    background: "transparent",
+
+    "&:hover": {
+      background: "#b48a2c",
+      color: "#ffffff",
+      borderColor: "#b48a2c",
+      transform: "translateY(-2px)",
+      boxShadow: "0 6px 18px rgba(180,138,44,0.35)",
+    },
+  }}
+>
+  Login
+</Button>
           )}
+        </Box>
+
+        {/* MOBILE MENU ICON */}
+        <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          <IconButton onClick={handleOpenMenu}>
+            <MenuIcon sx={{ color: scrolled ? "#000" : "#fff" }} />
+          </IconButton>
+
+          <Menu
+            anchorEl={anchorEl}
+            open={Boolean(anchorEl)}
+            onClose={handleCloseMenu}
+          >
+            {pages.map((item) => (
+              <MenuItem
+                key={item}
+                component={Link}
+                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                onClick={handleCloseMenu}
+              >
+                {item}
+              </MenuItem>
+            ))}
+
+            {!token && (
+              <MenuItem component={Link} to="/login">
+                Login
+              </MenuItem>
+            )}
+
+            {token && <MenuItem onClick={logout}>Logout</MenuItem>}
+          </Menu>
         </Box>
       </Toolbar>
     </AppBar>

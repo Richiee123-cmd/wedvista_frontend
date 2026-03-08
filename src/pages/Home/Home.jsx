@@ -111,7 +111,7 @@ function Home() {
           </h2>
         </div>
       </section>
-{/* FOUNDER SECTION */}
+
 {/* CLASSIC FOUNDER SECTION */}
 <section className="founder-section">
   <div className="founder-inner">

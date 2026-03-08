@@ -1,3 +1,4 @@
+import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Navabar/Navbar";
 import "./Contact.css";
 
@@ -49,6 +50,7 @@ function Contact() {
           <p>Working Hours: 9:00 AM – 6:00 PM</p>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

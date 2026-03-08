@@ -1,32 +1,56 @@
 /* HERO */
 
 .services-hero {
-  height: 60vh;
+  height: 65vh;
+  width: 100%;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   display: flex;
   align-items: center;
-  padding-left: 10%;
+  justify-content: center;
+  text-align: center;
 }
 
+/* Premium dark gradient overlay */
 .services-hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: linear-gradient(
+    120deg,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.7)
+  );
 }
 
+/* Text container */
 .services-overlay {
   position: relative;
   z-index: 2;
   color: white;
 }
 
+/* Heading */
 .services-overlay h1 {
-  font-size: 60px;
+  font-size: clamp(40px, 6vw, 70px);
   font-family: "Playfair Display", serif;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+/* Decorative gold line */
+.services-overlay h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #b48a2c;
+  margin: 18px auto 0;
+  border-radius: 5px;
 }
 
 /* SECTION */

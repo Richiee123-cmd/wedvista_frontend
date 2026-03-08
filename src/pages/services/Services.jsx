@@ -2,13 +2,14 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../../Components/Navabar/Navbar";
 import "./Services.css";
 import heroBg from "../../assets/bride-with-white-wedding-bride.jpg";
+import Footer from "../../Components/Footer/Footer"
 
-import venueImg from "../../assets/rajat-sarki-NvuOJFK53sE-unsplash.jpg";
+import venueImg from "../../assets/venue.jpg";
 import cateringImg from "../../assets/ibrahim-boran-m8YjB0noWiY-unsplash.jpg";
-import photoImg from "../../assets/rajat-sarki-NvuOJFK53sE-unsplash.jpg";
+import photoImg from "../../assets/ikshana-productions--xVpsIaq5MA-unsplash.jpg";
 import stylingImg from "../../assets/rajat-sarki-NvuOJFK53sE-unsplash.jpg";
-import decorImg from "../../assets/rajat-sarki-NvuOJFK53sE-unsplash.jpg";
-import musicImg from "../../assets/bride-with-white-wedding-bride.jpg";
+import decorImg from "../../assets/decoration.jpg";
+import musicImg from "../../assets/music.jpg";
 
 const services = [
   { title: "Venue", image: venueImg },
@@ -83,6 +84,7 @@ function Services() {
           ))}
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

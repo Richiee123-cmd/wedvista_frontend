@@ -116,20 +116,25 @@ h1, h2, h3, .section-title, .founder-heading {
 }
 
 .about-btn {
-  padding: 12px 30px;
-  border: 1px solid #b48a2c;
+  padding: 14px 34px;
+  border: 2px solid #b48a2c;
   background: transparent;
   color: #b48a2c;
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: 0.3s ease;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.35s ease;
 }
 
 .about-btn:hover {
-  background: #b48a2c;
-  color: white;
+  background: linear-gradient(135deg, #b48a2c, #d4af37);
+  color: #ffffff;
+  border-color: #b48a2c;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(180, 138, 44, 0.4);
 }
 
 /* ===============================

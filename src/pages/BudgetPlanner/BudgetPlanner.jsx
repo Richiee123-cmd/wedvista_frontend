@@ -3,6 +3,7 @@ import Navbar from "../../Components/Navabar/Navbar";
 import { getBudgetAPI, saveBudgetAPI } from "../../Service/allAPIs"; // adjust path
 import "./BudgetPlanner.css";
 import heroImg from "../../assets/CSP08749 2.JPG";
+import Footer from "../../Components/Footer/Footer";
 
 
 function BudgetPlanner() {
@@ -167,6 +168,7 @@ function BudgetPlanner() {
           </button>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

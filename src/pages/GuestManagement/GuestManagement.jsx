@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "../../Components/Navabar/Navbar";
 import "./GuestManagement.css";
 import heroImg from "../../assets/u_2ad3kll2vv-bride-8581643_1280.jpg";
+import Footer from "../../Components/Footer/Footer";
 
 function GuestManagement() {
   const [guests, setGuests] = useState([]);
@@ -97,6 +98,8 @@ function GuestManagement() {
           ))}
         </div>
       </div>
+
+      <Footer/>
     </>
   );
 }

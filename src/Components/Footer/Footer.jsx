@@ -1,4 +1,6 @@
 import "./Footer.css";
+import { Link } from "react-router-dom";
+import { Facebook, Instagram, Twitter } from "@mui/icons-material";
 
 function Footer() {
   return (
@@ -14,17 +16,24 @@ function Footer() {
             simplify planning, manage budgets, and connect you with trusted
             wedding vendors.
           </p>
+
+          {/* Social Icons */}
+          <div className="footer-social">
+            <Facebook />
+            <Instagram />
+            <Twitter />
+          </div>
         </div>
 
         {/* Quick Links */}
         <div className="footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Vendors</li>
-            <li>Budget Planner</li>
-            <li>Guest Management</li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/vendors">Vendors</Link></li>
+            <li><Link to="/budget">Budget Planner</Link></li>
+            <li><Link to="/guests">Guest Management</Link></li>
           </ul>
         </div>
 
