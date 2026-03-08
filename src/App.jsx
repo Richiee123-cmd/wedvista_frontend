@@ -5,9 +5,9 @@ import Home from "./pages/Home/Home";
 import Services from "./pages/services/Services";
 import BudgetPlanner from "./pages/BudgetPlanner/BudgetPlanner";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import Login from "../src/pages/Login";
-import Register from "../src/pages/Register";
-import Aboutus from "../src/pages/Aboutus/Aboutus"
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Aboutus from "./pages/Aboutus/Aboutus"
 import ServiceVendors from "./pages/ServiceVentors/ServiceVentors";
 import GuestManagement from "./pages/GuestManagement/GuestManagement";
 import Contact from "./pages/Contact/Contact";
